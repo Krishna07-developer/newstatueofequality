@@ -46,7 +46,7 @@ const UserCard = styled(Paper)(()=>({
     backgroundColor : '#e1b070',
     justifyContent : 'center',
     fontFamily : ' Teko, sans-serif',
-    padding :'10px',
+    padding :'45px',
     '@media (max-width : 600px)' : {
       marginTop : '-8vh',
       marginBottom :'10vh',
@@ -388,9 +388,7 @@ const Home = (props) => {
   const handleClose = () =>setOpen(false)
 
   return (<>
-    <Box sx={{display:'flex', alignItems:'center', justifyContent:'center', background:'#f2fcff', 
-                        padding: isDesktop ? '20px' : ''}}> 
-      <Box p={2} sx={{ maxWidth:'500px'}}>
+
         
         <UserCard>
 
@@ -773,8 +771,6 @@ const Home = (props) => {
           </Box>
           
         </UserCard>
-      </Box> 
-    </Box>
       
   </>)
 }
