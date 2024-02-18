@@ -449,7 +449,7 @@ const Home = (props) => {
           <div style={{display : 'flex' , justifyContent : 'center'}}><p style={styles.underline}></p></div>
           
           <DonationBox>
-            <a href="https://donations.divyasaketham.org/product-category/samatha-kumbh-2024/" style={{textDecoration : 'none', color : 'white'}}>
+            <a href="https://donations.divyasaketham.org/product-category/samatha-kumbh-2024/" style={{textDecoration : 'none', color : 'white',textWrap : 'nowrap'}}>
                 PARTICIPATE FOR DONATION
             </a>
           </DonationBox>
