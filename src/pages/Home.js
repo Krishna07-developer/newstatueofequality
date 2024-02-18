@@ -160,14 +160,6 @@ logoImg : {
     backgroundColor : 'white',
     borderRadius : '50%'
   },
-  defIcon: {
-    fontSize:'25vw'
-  },
- headerName : {
-    margin : '30px 0 30px 20vw ',
-    textAlign : 'left',
-    lineHeight : '0.5'
- },
  underline : {
     background : '#F76D02',
     width : '170px',
@@ -224,15 +216,6 @@ aTag : {
     fontSize : '24px',
     marginTop : '10px',
     color : 'white'
-  },
-
-  MediaIcon: {
-    padding:'10px',
-    borderRadius:'50%',
-    backgroundColor : 'black',
-    color : 'white',
-    marginTop : '5px',
-    fontSize : '18px'
   },
   aboutMe : {
     display : 'flex',
@@ -294,15 +277,6 @@ aTag : {
 
 
 const mobileStyles = {
-
-headerName : {
-  margin : '30px 0 30px 55vw ',
-  textAlign : 'left',
-  lineHeight : '0.5'
-},
- defIcon: {
-  fontSize:'20px',
-},
 navIcons : {
   fontSize : '26px',
   marginTop : '10px',
@@ -329,14 +303,6 @@ socialMediaCont: {
   display:'flex',
   justifyContent:'center',
   gap : '8px'
-},
-MediaIcon: {
-  padding:'10px',
-  borderRadius:'50%',
-  backgroundColor : '#590009',
-  color : 'white',
-  marginTop : '5px',
-  fontSize : '16px'
 },
 underline : {
   background : '#F76D02',
@@ -380,7 +346,7 @@ const Home = (props) => {
   }, [])
 
   const marginTop = {
-    marginTop : isDesktop ?  '80vh': '60vh'
+    marginTop : isDesktop ?  '80vh': '40vh'
   }
   const [open, setOpen] = useState(false);
   const handleOpen =  () =>setOpen(true)
@@ -660,7 +626,7 @@ const Home = (props) => {
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <Box sx={styles.photoGalleryImg}>
-                    <a href="https://photos.google.com/share/AF1QipOKEYXOkfsey-izWvdiW81Kzb74ZeSB3-tFRQxe0rQVAQBEuV2UUoZTmwBwPwah3Q?key=QU5oNlBGcVhHd09KTWNvQ2NkWEcxLUt0Y2MyMEdB" target="_blank">
+                    <a href="https://photos.google.com/share/AF1QipOKEYXOkfsey-izWvdiW81Kzb74ZeSB3-tFRQxe0rQVAQBEuV2UUoZTmwBwPwah3Q?key=QU5oNlBGcVhHd09KTWNvQ2NkWEcxLUt0Y2MyMEdB" target="_blank" rel="noreferrer">
                     <img src="https://statueofequality.org/wp-content/uploads/2023/03/Samatha-Kumbh-Maha-Kumbha-prokshana.jpg" alt="" width={'100%'}/>
                     </a>
                     </Box>
@@ -684,7 +650,7 @@ const Home = (props) => {
                 <Box sx={{color : 'red'}}><span style={{ fontWeight : '700'}}>Closed:</span>Every Wednesday</Box>
               </Paper>
             </Stack>
-            <Paper>
+            <Paper sx={{padding : '10px'}}>
               <h4>Entry Fee:</h4>
               <Box sx={{display : 'flex' , gap : '2px'}}><span style={{...styles.boxBold, width : '15%'}}>₹ 200</span><span>- per Adult</span></Box>
               <Box sx={{display : 'flex' , gap : '2px'}}><span style={{...styles.boxBold, width : '15%'}}>₹ 125</span><span>- per Child (between 5-12 years)</span></Box>
@@ -692,8 +658,10 @@ const Home = (props) => {
             </Paper>
           </Box>
           
-          <Button onClick={handleOpen} variant="outlined" sx={{marginBlock : '20px'}}>Click for Entry Pass Payment Details</Button>
-          <Dialog onClose={handleClose} open={open}>
+          <a href="https://samaroham.divyasaketham.org/" style={{margin : 'auto'}}>
+          <Button  variant="outlined" sx={{marginBlock : '20px'}}>Book Entry Pass</Button>
+          </a>
+          {/* <Dialog onClose={handleClose} open={open}>
             <Box sx={styles.closeIcon} onClick={handleClose}><IoCloseOutline/></Box>
             <Stack direction={'column'} padding={2} >
               <Box>
@@ -729,18 +697,18 @@ const Home = (props) => {
                   </Box>
               </Box>
             </Stack>
-          </Dialog>
+          </Dialog> */}
 
           <Box>
             <HeaderBox style={styles.headerUnderline} id="fun-time">FUN TIME - CHITRALEKHANAM :</HeaderBox>
             <Box>
               <img src="https://lh3.googleusercontent.com/pw/ABLVV84Pwh0yn4bVrPelTnLoW_kFotMkSaaokUKd3g06iqsSZb3IVl3Zq0rrk5y-TIegdruejQ7EQe0CXaiTrIARTnUPV8axKfWCrlCkM7mgo8AFmfP5QY-fSaHmHCwRMf8vSDcVR5ffcLwK2WGXN9IlU1ZU=w411-h913-s-no-gm?authuser=0" alt="" width={'100%'} />
-            </Box>
+            </Box><br/>
             <Box>
               <img src="https://lh3.googleusercontent.com/pw/ABLVV86VZB1KL46gvex_DOlpAo7XwcH6psHd0uNmaAFj8LGxFjOyeewnRe5I9tVaSe-NfUuZTKcGjwQ6NkF3gggZ0DxG8Y1IXtUb2PdvCs9egNHsnXPF_KOl3eqMs3CtlXH704WJsg4ptg-lgsgw65xHiNXd=w1498-h913-s-no-gm?authuser=0" alt="" width={'100%'} />
             </Box>
             <ButtonTypeBox style={{ display : 'flex' , justifyContent : 'center'}}>
-              <a href="https://photos.google.com/share/AF1QipPIVt-ErJmzOcXsQfnJhHH0gZj0Y8CvWRqifwuxOzcIawIFyijfPa55B0KcVLREfQ?pli=1&key=MW1jNWNPVERzaDdTekZGT0Rwa0o2VUFuUjVELWtn" target="_blank" style={{...styles.aTag , color : '#F4C5C9' }}>More To See</a>
+              <a href="https://photos.google.com/share/AF1QipPIVt-ErJmzOcXsQfnJhHH0gZj0Y8CvWRqifwuxOzcIawIFyijfPa55B0KcVLREfQ?pli=1&key=MW1jNWNPVERzaDdTekZGT0Rwa0o2VUFuUjVELWtn" target="_blank" rel="noreferrer" style={{...styles.aTag , color : '#F4C5C9' }}>More To See</a>
             </ButtonTypeBox> 
           </Box>
 
