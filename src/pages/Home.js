@@ -46,10 +46,11 @@ const UserCard = styled(Paper)(()=>({
     backgroundColor : '#e1b070',
     justifyContent : 'center',
     fontFamily : ' Teko, sans-serif',
-    padding :'45px',
+    paddingRight :'46px',
+    paddingLeft : '14px',
     '@media (max-width : 600px)' : {
       marginTop : '-8vh',
-      marginBottom :'10vh',
+    //   marginBottom :'10vh',
     }
 }))
 
@@ -61,7 +62,7 @@ const ProfileDiv = styled(Box)(()=>({
     '@media (max-width : 600px)' : {
       width : '100px',
       height : '100px',
-      margin : '0vh 0  5vh 60vw',
+      margin : '10vh 0  5vh 72vw',
       
     }
 }))
@@ -262,7 +263,7 @@ aTag : {
     fontWeight : '800'
   },
   photoGalleryImg : {
-    width : '200px'
+    width : '250px'
   },
   flexItems : {
     display : 'flex',
@@ -367,9 +368,7 @@ function handleScroll(event) {
 
 const Home = (props) => {
   
-  const {card, callMe, whatsappMe, mailMe, initApptBooking, initEnquiryBooking,
-         openUrl, cartData, updateCart, showCartModal} = props
-         const isDesktop = true
+  const isDesktop = true
 
   const isSmallScreen = useMediaQuery('(max-width : 600px)')
   const [minTimeout, setMinTimeout] = useState(false)
@@ -397,7 +396,7 @@ const Home = (props) => {
                 <p style={isSmallScreen ? mobileStyles.underline:styles.underline}></p>
             </ProfileDiv>
 
-            <a href="https://statueofequality.org/register/" style={{...styles.aTag, position : 'absolute',top:isDesktop ? '10.5%': '6.8%',left:isDesktop ? '30%':'21%' }}>
+            <a href="https://statueofequality.org/register/" style={{...styles.aTag, position : 'absolute',top:isDesktop ? '7.5%': '10%',left:isDesktop ? '22%':'18%' }}>
                 <Box sx={styles.register} >REGISTER TO PARTICIPATE</Box>
             </a>
 
