@@ -79,3 +79,7 @@ b {
   margin-bottom: -85px !important;
   margin-left: -10px !important;
 }
+
+.css-15kkzoc-MuiPaper-root {
+  box-shadow: none !important;
+}

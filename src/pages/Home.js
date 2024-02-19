@@ -23,12 +23,6 @@ import Instagram from "../assets/instagram.png"
 import Website from "../assets/websiteIcon.png"
 import Call from "../assets/callIcon.png"
 import Email from "../assets/mail.png"
-// import Paytm from "../assets/paytm-icon.png"
-// import PhonePe from "../assets/phonepe-logo-icon.png"
-// import GooglePay from "../assets/google-pay-icon.png"
-// import QrCode from "../assets/scan_me_qr_code.jpg"
-// import NetBanking from "../assets/net-banking-icon.png"
-// import { IoCloseOutline } from "react-icons/io5";
 
 
 
@@ -36,22 +30,15 @@ import Email from "../assets/mail.png"
 const UserCard = styled(Paper)(()=>({
     display:'flex',
     flexDirection:'column',
-    background : `url(${statueOfEquality})`,
     position : 'relative',
     color : 'black',
-    backgroundSize : '100%',
-    backgroundPosition : 'top center',
-    backgroundRepeat : 'no-repeat',
+    backgroundColor : 'transparent',
     width : '100%',
-    backgroundColor : '#e1b070',
     justifyContent : 'center',
     fontFamily : ' Teko, sans-serif',
     paddingRight :'46px',
-    paddingLeft : '14px',
     '@media (max-width : 600px)' : {
       marginTop : '-8vh',
-      paddingLeft : '27px'
-    //   marginBottom :'10vh',
     }
 }))
 
@@ -205,7 +192,7 @@ aTag : {
     alignItems : 'center',
     gap : '5px',
     padding : '10px',
-    backgroundColor : '#c4b6ab',
+    backgroundColor : '#d39854',
     margin : '10px',
     fontSize : '18px'
   },
@@ -308,13 +295,10 @@ const Home = (props) => {
   const marginTop = {
     marginTop : isSmallScreen ?  '60vh': '120vh'
   }
-  // const [open, setOpen] = useState(false);
-  // const handleOpen =  () =>setOpen(true)
-  // const handleClose = () =>setOpen(false)
 
   return (<>
 
-        
+        <Box sx={{backgroundColor:'#ffe5c4',padding: '10px',backgroundImage:`url(${statueOfEquality})`,backgroundSize : '100%', backgroundPosition : 'top center',backgroundRepeat : 'no-repeat',}}>
         <UserCard>
 
             <ProfileDiv>
@@ -322,7 +306,7 @@ const Home = (props) => {
                 <p style={isSmallScreen ? mobileStyles.underline:styles.underline}></p>
             </ProfileDiv>
 
-            <a href="https://statueofequality.org/register/" style={{...styles.aTag, position : 'absolute',top:isSmallScreen ? '7.5%': '1%',left:isDesktop ? '22%':'18%' }}>
+            <a href="https://statueofequality.org/register/" style={{...styles.aTag, position : 'absolute',top:isSmallScreen ? '7.5%': '1%',left:isSmallScreen ? '14%':'18%' }}>
                 <Box sx={styles.register} >REGISTER TO PARTICIPATE</Box>
             </a>
 
@@ -469,9 +453,9 @@ const Home = (props) => {
           <Box sx={{marginBlock : '5vh '}}>
           <HeaderBox style={styles.headerUnderline}>SAMATHA KUMB 2024 INVITATION LINKS :</HeaderBox>
           <Stack sx={{ maxWidth : '300px',margin : 'auto',padding : '10px'}}>
-            <Button variant="contained" sx={styles.invitation}><MdPictureAsPdf /><a href="https://statueofequality.org/wp-content/uploads/2024/02/Samatha-Kumbh-2024-FEB-20-MAR-1.pdf" target="_blank" style={{...styles.aTag , color : '#EC6C02'}}>Invitation In English</a></Button>
-            <Button variant="contained" sx={styles.invitation}><MdPictureAsPdf /><a href="https://statueofequality.org/wp-content/uploads/2024/01/Samatha_Kumb_Telugu.pdf" target="_blank" style={{...styles.aTag , color : '#EC6C02'}}>Invitation In Telugu</a></Button>
-            <Button variant="contained"  sx={styles.invitation}><MdPictureAsPdf /><a href="https://statueofequality.org/wp-content/uploads/2024/01/Samatha_Kumb_Hindi.pdf" target="_blank" style={{...styles.aTag , color : '#EC6C02'}}>Invitation In Hindhi</a></Button>
+            <Button variant="contained" sx={styles.invitation}><MdPictureAsPdf /><a href="https://statueofequality.org/wp-content/uploads/2024/02/Samatha-Kumbh-2024-FEB-20-MAR-1.pdf" target="_blank" style={{...styles.aTag , color : 'white'}}>Invitation In English</a></Button>
+            <Button variant="contained" sx={styles.invitation}><MdPictureAsPdf /><a href="https://statueofequality.org/wp-content/uploads/2024/01/Samatha_Kumb_Telugu.pdf" target="_blank" style={{...styles.aTag , color : 'white'}}>Invitation In Telugu</a></Button>
+            <Button variant="contained"  sx={styles.invitation}><MdPictureAsPdf /><a href="https://statueofequality.org/wp-content/uploads/2024/01/Samatha_Kumb_Hindi.pdf" target="_blank" style={{...styles.aTag , color : 'white'}}>Invitation In Hindhi</a></Button>
           </Stack>
          </Box>
 
@@ -602,11 +586,11 @@ const Home = (props) => {
           </Box>
 
 
-          <Box>
+          <Box sx={{width : '100%'}}>
             <HeaderBox style={styles.headerUnderline} id="timings">TIMINGS AND FEE :</HeaderBox>
             <Stack marginBlock={4}>
               <h4>Timings:</h4>
-              <Paper sx={{textAlign : 'center', paddingBlock : '10px'}}>
+              <Paper sx={{textAlign : 'center', paddingBlock : '15px'}}>
                 <Box sx={{...styles.flexItems, color : '#048018'}}><IoTimeOutline/> VISITING HOURS</Box>
                 <Box>Monday to Friday</Box>
                 <Box sx={styles.flexItems}><span style={{ fontWeight : '700'}}>Hours:</span>11:00 am – 08:00 pm</Box>
@@ -703,7 +687,7 @@ const Home = (props) => {
           </Box>
           
         </UserCard>
-      
+        </Box>
   </>)
 }
 
