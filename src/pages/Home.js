@@ -160,17 +160,6 @@ const DonationBox = styled(Box)(()=>({
 
 
 let styles = {
-logoImg : {
-    width : '42%'
-},
-  profilePic : {
-    width : '100%',
-    height : '100%',
-    marginTop:'50px',
-    marginLeft : '3vw',
-    backgroundColor : 'white',
-    borderRadius : '50%'
-  },
  underline : {
     background : '#F76D02',
     width : '170px',
@@ -184,45 +173,11 @@ logoImg : {
   fontWeight : '900',
   color : 'black'
  },
- circleBox : {
-    border : '2px solid #B02020',
-    borderRadius : '50%',
-    width : 'max-content',
-    margin : '10px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    cursor : 'pointer',
-    boxShadow : '0 0 7px 2px gray'
- },
-circleIcon : {
-    background : '#B02020',
-    borderRadius : '50%',
-    fontSize : '24px',
-    padding : '10px',
-    margin : '3px',
-    color : 'white'  
-},
 aTag : {
     textDecoration : 'none',
     whiteSpace : 'nowrap',
   
 },
-  contactCont: {
-    display:'flex',
-    marginTop:'20px',
-    justifyContent:'space-around'
-  },
-  followUsBox : {
-    display : 'flex' ,
-    flexDirection : 'column' ,
-  },
-  socialMediaCont: {
-    display:'flex',
-    justifyContent:'space-around',
-    gap : '5px',
-   
-  },
   navIcons : {
     fontSize : '24px',
     marginTop : '10px',
@@ -281,7 +236,8 @@ aTag : {
     backgroundColor : '#d39854',
     color : 'white',
     borderRadius : '8px',
-    padding : '10px'
+    padding : '10px',
+    boxShadow : '0 2px 4px black'
   }
 
 }
@@ -306,14 +262,6 @@ aboutMe : {
 },
 mobileScreenMargin : {
   margin : '8px ',
-},
-followUsBox : {
-  marginLeft : '10px'
-},
-socialMediaCont: {
-  display:'flex',
-  justifyContent:'center',
-  gap : '8px'
 },
 underline : {
   background : '#F76D02',
@@ -359,9 +307,9 @@ const Home = (props) => {
   const marginTop = {
     marginTop : isSmallScreen ?  '60vh': '120vh'
   }
-  const [open, setOpen] = useState(false);
-  const handleOpen =  () =>setOpen(true)
-  const handleClose = () =>setOpen(false)
+  // const [open, setOpen] = useState(false);
+  // const handleOpen =  () =>setOpen(true)
+  // const handleClose = () =>setOpen(false)
 
   return (<>
 
