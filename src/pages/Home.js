@@ -50,6 +50,7 @@ const UserCard = styled(Paper)(()=>({
     paddingLeft : '14px',
     '@media (max-width : 600px)' : {
       marginTop : '-8vh',
+      paddingLeft : '27px'
     //   marginBottom :'10vh',
     }
 }))
@@ -486,7 +487,7 @@ const Home = (props) => {
             </Box>
           </Box>
 
-          <ReactPlayer url={'https://www.youtube.com/watch?v=QfSMfEodOgM'} controls={false} width={'100%'} height={isSmallScreen ? '' : '1000px'} pip={true} stopOnUnmount={false}/>
+          <ReactPlayer url={'https://www.youtube.com/watch?v=QfSMfEodOgM'} controls={false} width={'100%'} height={isSmallScreen ? '311px' : '1000px'} pip={true} stopOnUnmount={false}/>
 
           <Box>
             <HeaderBox style={styles.headerUnderline} id="fountain">FOUNTAIN AND LASER SHOW :</HeaderBox>
